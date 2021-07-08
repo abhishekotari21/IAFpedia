@@ -30,8 +30,11 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+AUTH_USER_MODEL = 'sign_up_page.Account'
+
 INSTALLED_APPS = [
     'main_page',
+    'sign_up_page',
 
 
     'django.contrib.admin',

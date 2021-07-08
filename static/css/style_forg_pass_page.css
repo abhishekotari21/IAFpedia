@@ -26,11 +26,6 @@ header {
     vertical-align:middle;
     width:70px;
     padding-left:10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-#logo1:hover{
-    width: 75px;
 }
 #logo2 {
     vertical-align:middle;
