@@ -19,5 +19,6 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('main_page.urls'))
+    path('',include('main_page.urls')),
+    path('',include('sign_up_page.urls')),
 ]
