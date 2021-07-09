@@ -10,4 +10,6 @@ urlpatterns = [
     path('exams/',views.exams,name='exams'),
     path('exam_subpage/',views.exam_subpage,name='exam_subpage'),
     path('hof_army/',views.hof_army,name='hof_army'),
+    path('hof_navy/',views.hof_navy,name='hof_navy'),
+    path('hof_airforce/',views.hof_airforce,name='hof_airforce'),
 ]

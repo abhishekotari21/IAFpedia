@@ -24,3 +24,9 @@ def exam_subpage(request):
 
 def hof_army(request):
     return render(request,'hof_army.html')
+
+def hof_navy(request):
+    return render(request,'hof_navy.html')
+
+def hof_airforce(request):
+    return render(request,'hof_airforce.html')
