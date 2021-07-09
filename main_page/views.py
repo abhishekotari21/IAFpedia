@@ -10,3 +10,5 @@ def exams(request):
     return render(request,'exam_main_page.html')
 def exam_subpage(request):
     return render(request,'exam_subpage.html')
+def about_us(request):
+    return render(request,'about_us.html')

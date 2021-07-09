@@ -2,7 +2,8 @@
 {% load static %}
 
 {%block css%}
-<link rel="stylesheet" type="text/css" href="{% static 'css/style_aboutus_page.css' %}">{%endblock css%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_aboutus_page.css' %}">
+{%endblock css%}
 {% block title %}About Us{% endblock title %}
 {% block body %}
 <!--Added By Omkar Mudkanna for about_us page on 9 July-->
@@ -33,7 +34,7 @@
             <div id="creator_content1">
                 <img src="{% static 'images/profiles/profiles.jpg' %}">
                 <ul style="list-style: none;">
-                    <li><a href="{% url 'https://github.com/omkar2887' %}">Omkar Mudkanna</a></li>
+                    <li><a href="https://github.com/omkar2887">Omkar Mudkanna</a></li>
                     <li>VIT 2024 Chemical</li>
                 </ul>
             </div>
@@ -42,7 +43,7 @@
             <div id="creator_content2">
                 <img src="{% static 'images/profiles/profiles.jpg' %}">
                 <ul style="list-style: none;">
-                    <li><a href="{% url 'https://github.com/omkar3602' %}" target="_blank">Omkar Jahagirdar</a></li>
+                    <li><a href="https://github.com/omkar3602" target="_blank">Omkar Jahagirdar</a></li>
                     <li>VIT 2024 Computer</li>
                 </ul>
             </div>
@@ -51,7 +52,7 @@
             <div id="creator_content3">
                 <img src="{% static 'images/profiles/profiles.jpg' %}">
                 <ul style="list-style: none;">
-                    <li><a href="{% url 'https://github.com/pardeshionkar' %}">Onkar Pardeshi</a></li>
+                    <li><a href="https://github.com/pardeshionkar">Onkar Pardeshi</a></li>
                     <li>VIT 2024 Chemical</li>
                 </ul>
             </div>
@@ -60,7 +61,7 @@
             <div id="creator_content4">
                 <img src="{% static 'images/profiles/profiles.jpg' %}">
                 <ul style="list-style: none;">
-                    <li><a href="{% url 'https://github.com/abhishekotari21' %}">Abhishek Otari</a></li>
+                    <li><a href="https://github.com/abhishekotari21">Abhishek Otari</a></li>
                     <li>VIT 2024 Mechanical</li>
                 </ul>
             </div>
@@ -69,7 +70,7 @@
             <div id="creator_content5">
                 <img src="{% static 'images/profiles/profiles.jpg' %}">
                 <ul style="list-style: none;">
-                    <li><a href="{% url 'https://github.com/SakshiOzarde66' %}">Sakshi Ozarde</a></li>
+                    <li><a href="https://github.com/SakshiOzarde66">Sakshi Ozarde</a></li>
                     <li>VIT 2024 Computer</li>
                 </ul>
             </div>
@@ -78,7 +79,7 @@
             <div id="creator_content6">
                 <img src="{% static 'images/profiles/profiles.jpg' %}">
                 <ul style="list-style: none;">
-                    <li><a href="{% url 'https://github.com/adityPachore' %}">Aditya Pachore</a></li>
+                    <li><a href="https://github.com/adityPachore">Aditya Pachore</a></li>
                     <li>VIT 2024 Computer</li>
                 </ul>
             </div>
@@ -87,3 +88,6 @@
 </div>
 <!--Added By Omkar Mudkanna for about_us page-->
 {% endblock body %}
+{% block space %}
+<div class="last-space"></div>
+{% endblock space %}
