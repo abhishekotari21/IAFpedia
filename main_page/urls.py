@@ -12,6 +12,6 @@ urlpatterns = [
     path('hof_army/',views.hof_army,name='hof_army'),
     path('hof_navy/',views.hof_navy,name='hof_navy'),
     path('hof_airforce/',views.hof_airforce,name='hof_airforce'),
-    path('donations',views.donations,name='donations'),
-    path('settings',views.settings,name='settings'),
+    path('donations/',views.donations,name='donations'),
+    path('settings/',views.settings,name='settings'),
 ]

@@ -68,9 +68,9 @@
                         <img src="{% static 'images/user.svg' %}" style="vertical-align: middle;" alt="user" width="20px"></a>
                         <div class="sub-menu-user">
                             <ul>
-                                <li><a href="settings.html"><i class="far fa-user-circle"></i>Profile</a></li>
-                                <li><a href="settings.html"><i class="fas fa-bookmark"></i>Bookmarks</a></li>
-                                <li><a href="settings.html"><i class="fas fa-cog"></i>Settings</a></li>
+                                <li><a href="{% url 'settings' %}"><i class="far fa-user-circle"></i>Profile</a></li>
+                                <li><a href="{% url 'settings' %}"><i class="fas fa-bookmark"></i>Bookmarks</a></li>
+                                <li><a href="{% url 'settings' %}"><i class="fas fa-cog"></i>Settings</a></li>
                                 <li><a href="#"><i class="fas fa-power-off"></i>Logout</a></li>
                             </ul>
                         </div>
