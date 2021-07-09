@@ -30,3 +30,5 @@ def hof_navy(request):
 
 def hof_airforce(request):
     return render(request,'hof_airforce.html')
+def donations(request):
+    return render(request,'donation_page.html')
