@@ -6,18 +6,23 @@
 {% block title %}Log in{% endblock title %}
 {% block body %}
 <div class="bg">
-    <form>
+    {% for message in messages %}
+        <h2 id="message">{{message}}</h2>
+        <span class="close">&times;</span>
+    {% endfor %}
+    <form method="POST" action="{% url 'login_page' %}">
+        {% csrf_token %}
         <h1>LOGIN</h1>
         <div class="medium-space"></div>
 
         <label>Enter username:</label>
         <div class="small-space"></div>
-        <input type="text" required placeholder="Your username" id="uname_test">
+        <input type="text" required placeholder="Your username" id="uname_test" name="uname_test">
         <div class="small-space"></div>
 
         <label class="pass">Enter password:</label>
         <div class="small-space"></div>
-        <input type="password" required placeholder="Your password" id="pass_test">
+        <input type="password" required placeholder="Your password" id="pass_test" name="pass_test">
         <div class="medium-space"></div>
         <ul id="db_ans"></ul>
         <div class="center">
