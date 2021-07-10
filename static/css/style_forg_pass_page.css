@@ -122,6 +122,11 @@ form {
     border-radius: 30px;
     box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.5);
 }
+/* @media screen and (min-width: 800px) {
+    form {
+        margin-top: 100px;
+    }
+} */
 form h1{
     text-align:center;
 }
