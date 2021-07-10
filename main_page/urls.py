@@ -14,4 +14,5 @@ urlpatterns = [
     path('hof_airforce/',views.hof_airforce,name='hof_airforce'),
     path('donations/',views.donations,name='donations'),
     path('settings/',views.settings,name='settings'),
+    path('newsfeed/',views.newsfeed,name='newsfeeed'),
 ]

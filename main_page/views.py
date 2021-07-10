@@ -35,3 +35,6 @@ def donations(request):
 
 def settings(request):
     return render(request,'settings.html')
+
+def newsfeed(request):
+    return render(request,'newsfeed.html')
