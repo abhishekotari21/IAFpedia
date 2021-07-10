@@ -16,38 +16,38 @@ function checkuname(){
         document.getElementById("uname_ans").style.color = "red";
         uname_ans.innerHTML = "<li>*Please fill the Username</li>"
     }
-    else{
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET","../scripts/users.json",true);
-        xhr.onload=function(){
-            if(xhr.status == 200){
-                var data = JSON.parse(this.responseText);
+    // else{
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open("GET","../scripts/users.json",true);
+    //     xhr.onload=function(){
+    //         if(xhr.status == 200){
+    //             var data = JSON.parse(this.responseText);
 
-                try{
-                    for(var i=0;i<=data.length;i++){
-                        if(data[i].username==_username){
-                            status_username=false;
-                            document.getElementById("uname_ans").style.color = "red";
-                            document.getElementById("uname_ans").innerHTML = "<li>*Username not available</li>";
-                            break;
-                        }
-                        else{
-                            status_username=true;
-                        }
-                    }
-                }
-                catch(err){
-                    document.getElementById("uname_ans").style.color = "green";
-                    document.getElementById("uname_ans").innerHTML = "<li>*Username available</li>";
-                }
+    //             try{
+    //                 for(var i=0;i<=data.length;i++){
+    //                     if(data[i].username==_username){
+    //                         status_username=false;
+    //                         document.getElementById("uname_ans").style.color = "red";
+    //                         document.getElementById("uname_ans").innerHTML = "<li>*Username not available</li>";
+    //                         break;
+    //                     }
+    //                     else{
+    //                         status_username=true;
+    //                     }
+    //                 }
+    //             }
+    //             catch(err){
+    //                 document.getElementById("uname_ans").style.color = "green";
+    //                 document.getElementById("uname_ans").innerHTML = "<li>*Username available</li>";
+    //             }
 
-            }
-            else{
-                console.log("Error")
-            }
-        }
-        xhr.send();
-    }
+    //         }
+    //         else{
+    //             console.log("Error")
+    //         }
+    //     }
+    //     xhr.send();
+    // }
     
 }
 
@@ -102,34 +102,34 @@ function check_email(){
     if(val == false){
         document.getElementById("email_ans").innerHTML = "<li>*Please enter valid email</li>";
     }
-    else{
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET","../scripts/users.json",true);
-        xhr.onload=function(){
-            if(xhr.status==200){
-                var data = JSON.parse(xhr.responseText);
-                try{
-                    for(var i=0;i<=data.length;i++){
-                        if(data[i].email==_email){
-                            status_email=false;
-                            document.getElementById("email_ans").innerHTML = "<li>*Email id taken</li>";
-                            break;
-                        }
-                        else{
-                            status_email=true;
-                        }
-                    }
-                }
-                catch(err){
-                    console.log("id not found");
-                }
-            }
-            else{
-                console.log("ERROR!!");
-            }
-        }
-        xhr.send();
-    }
+    // else{
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open("GET","../scripts/users.json",true);
+    //     xhr.onload=function(){
+    //         if(xhr.status==200){
+    //             var data = JSON.parse(xhr.responseText);
+    //             try{
+    //                 for(var i=0;i<=data.length;i++){
+    //                     if(data[i].email==_email){
+    //                         status_email=false;
+    //                         document.getElementById("email_ans").innerHTML = "<li>*Email id taken</li>";
+    //                         break;
+    //                     }
+    //                     else{
+    //                         status_email=true;
+    //                     }
+    //                 }
+    //             }
+    //             catch(err){
+    //                 console.log("id not found");
+    //             }
+    //         }
+    //         else{
+    //             console.log("ERROR!!");
+    //         }
+    //     }
+    //     xhr.send();
+    // }
 }
 //abc@bcd.efg
 
