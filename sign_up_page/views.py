@@ -28,12 +28,15 @@ def signup(request):
             else:
                 user=Account.objects.create_user(fullname=fullname, username=username, dob=dob, gender=gender, email=email, state=state, city=city, pincode=pincode, password=password1)
                 user.save()
-                return redirect('login_page')
+                return redirect('signup_done')
         else:
             messages.info(request, 'Make sure your passwords match.')
             return redirect('signup_page')
     else:
         return render(request,'signup_page.html')
+
+def signup_done(request):
+    return render(request,'signup_done.html')
 
 def login(request):
     if request.method == 'POST':
@@ -50,9 +53,6 @@ def login(request):
             return redirect('login_page')
     else:
         return render(request,'login_page.html')
-
-def forg_pass(request):
-    return render(request,'forg_pass_page.html')
 
 def logout(request):
     auth.logout(request)
