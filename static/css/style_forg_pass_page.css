@@ -139,7 +139,7 @@ form input {
     padding: 7px;
     font-size: 18px;
 }
-input[type="text"]
+input[type="text"],input[type="email"],input[type="password"]
 {
     width: 300px;
     padding: 12px;
@@ -237,16 +237,25 @@ footer a:hover {
 }
 /* close button*/
 .close{
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
+    position: fixed;
+    top: 116px;
+    right: 20px;
+    color: #555;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 2;
 }
 .close:hover, .close:focus{
-    color: #bbb;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+#message {
+    text-align: center;
+    background: #f1f1f1;
+    padding:20px;
+    z-index: 2;
+    position:sticky;
+    top:95px;
 }
