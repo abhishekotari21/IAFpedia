@@ -8,6 +8,7 @@
 <div class="bg">
     {% for message in messages %}
         <h2 id="message">{{message}}</h2>
+        <span class="close">&times;</span>
     {% endfor %}
     <form method="POST" action="{% url 'login_page' %}">
         {% csrf_token %}

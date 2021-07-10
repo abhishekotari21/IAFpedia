@@ -34,6 +34,7 @@ def signup(request):
             return redirect('signup_page')
     else:
         return render(request,'signup_page.html')
+
 def login(request):
     if request.method == 'POST':
         username=request.POST['uname_test']
@@ -49,5 +50,11 @@ def login(request):
             return redirect('login_page')
     else:
         return render(request,'login_page.html')
+
 def forg_pass(request):
     return render(request,'forg_pass_page.html')
+
+def logout(request):
+    auth.logout(request)
+    messages.info(request, 'Thank you for using our website!')
+    return redirect('login_page')

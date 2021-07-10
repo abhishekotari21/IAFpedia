@@ -35,5 +35,13 @@
         {% block space %}{% endblock space %}
         <!-- <div class="last-space"></div> -->
     </main>
+    <script>
+        var msg=document.getElementById("message");
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function(){
+            msg.style.display = "none";
+            span.style.display = "none";
+        }
+    </script>
 </body>
 </html>
