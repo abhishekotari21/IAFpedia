@@ -28,10 +28,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#email is sent to console as in development stage
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Application definition
+
+AUTH_USER_MODEL = 'sign_up_page.Account'
 
 INSTALLED_APPS = [
     'main_page',
+    'sign_up_page',
 
 
     'django.contrib.admin',
@@ -87,6 +94,8 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
+AUTH_PASSWORD_VALIDATORS = []
+'''
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -101,6 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+'''
 
 
 # Internationalization
