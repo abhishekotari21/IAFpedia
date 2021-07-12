@@ -40,19 +40,19 @@
         <div class="container">
             <ul>
                 <li><a href="{% url 'main_page' %}">HOME</a></li>
-                <li><a href="newsfeed.html">NEWS FEED</a></li>
+                <li><a href="{% url 'newsfeed' %}">NEWS FEED</a></li>
                 <li><a href="{% url 'exams' %}">EXAMS</a></li>
-                <li class="hof"><a href="">HALL OF FAME</a>
+                <li class="hof"><a href="{% url 'hof_army' %}">HALL OF FAME</a>
                     <div class="sub-menu-hof">
                         <ul>
-                            <li><a href="hof_army.html">ARMY</a></li>
-                            <li><a href="hof_navy.html">NAVY</a></li>
-                            <li><a href="hof_airforce.html">AIRFORCE</a></li>
+                            <li><a href="{% url 'hof_army' %}">ARMY</a></li>
+                            <li><a href="{% url 'hof_navy' %}">NAVY</a></li>
+                            <li><a href="{% url 'hof_airforce' %}">AIRFORCE</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="he.html">HISTORICAL EVENTS</a></li>
-                <li><a href="donation_page.html">DONATIONS</a></li>
+                <li><a href="{% url 'he' %}">HISTORICAL EVENTS</a></li>
+                <li><a href="{% url 'donations' %}">DONATIONS</a></li>
                 <div class="right">
                     <li class="bell"><a href="#">
                         <img src="{% static 'images/bell.svg' %}" style="vertical-align: middle;" alt="bell" width="20px"></a> 
@@ -68,9 +68,16 @@
                         <img src="{% static 'images/user.svg' %}" style="vertical-align: middle;" alt="user" width="20px"></a>
                         <div class="sub-menu-user">
                             <ul>
-                                <li><a href="settings.html"><i class="far fa-user-circle"></i>Profile</a></li>
-                                <li><a href="settings.html"><i class="fas fa-bookmark"></i>Bookmarks</a></li>
-                                <li><a href="settings.html"><i class="fas fa-cog"></i>Settings</a></li>
+                                <li><a href="{% url 'settings' %}"><i class="far fa-user-circle"></i>Profile</a></li>
+                                <li><a href="{% url 'settings' %}"><i class="fas fa-bookmark"></i>Bookmarks</a></li>
+                                <li><a href="{% url 'settings' %}"><i class="fas fa-cog"></i>Settings</a></li>
+                                <li>
+                                    {% if user.is_authenticated %}
+                                        <a href="{% url 'logout' %}"><i class="fas fa-power-off"></i>Logout</a>
+                                    {% else %}
+                                        <a href="{% url 'login_page' %}"><i class="fas fa-sign-in-alt"></i>Log in</a>
+                                    {% endif %}
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -88,10 +95,10 @@
     <footer>
         <div class="container">
             <ul>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="sources.html">Sources</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'sources' %}">Sources</a></li>
                 <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="{% url 'contactus' %}">Contact Us</a></li>
             </ul>
         </div>
     </footer>
