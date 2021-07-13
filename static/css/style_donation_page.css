@@ -395,6 +395,17 @@ main{
     margin: 20px;
     padding: 10px;
 }
+/* changed on 13/7/21 */
+.text span{
+    font-size: x-large;
+    font-family: monospace;
+    font-style: normal;
+    width: 80%;
+    margin: 20px;
+    padding: 10px;
+    color: red;
+}
+/* changed on 13/7/21 */
 .button{
     background: rgb(75, 24, 72);
     color: white;
