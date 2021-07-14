@@ -29,8 +29,15 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 #email is sent to console as in development stage
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# if DEBUG:
+#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'iafpedia21@gmail.com'
+EMAIL_HOST_PASSWORD = 'oyrvckceblrrtooj'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_EMAIL_FROM = 'IAFpedia Team <iafpedia21@gmail.com>'
 
 # Application definition
 
