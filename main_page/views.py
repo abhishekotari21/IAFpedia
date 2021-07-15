@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BlogPost
+from .models import BlogPost, HistoricalEvent
 # Create your views here.
 def home(request):
     return render(request,'main_page.html')
@@ -39,7 +39,11 @@ def hof_airforce(request):
     return render(request,'hof_airforce.html')
 
 def he(request):
-    return render(request,'he.html')
+    HisEvents=HistoricalEvent.objects.all()
+    context={
+        'HisEvents':HisEvents,
+    }
+    return render(request,'he.html',context)
 
 def donations(request):
     return render(request,'donation_page.html')

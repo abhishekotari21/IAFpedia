@@ -10,92 +10,19 @@
                 <div class="container-class">
                     <h1 class="heading">Historical Events</h1>
                     <div class="card-wrapper">
+                        {% for HisEvent in HisEvents %}
                         <div class="card">
                             <img src="{% static 'images/historical_events/sino-indian.jpg' %}" alt="cardbg" class="cardimg">
-                            <h1>Sino-Indian War</h1>
-                            <p class="title">October-November 1962</p>
+                            <h1>{{ HisEvent.title }}</h1>
+                            <p class="title">{{ HisEvent.duration }}</p>
                             <p class="about">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel itaque ab tempora unde ipsum fugiat, fuga, quam deleniti quas numquam sit maiores, nulla qui exercitationem doloremque est dignissimos esse voluptatum quo eveniet error laudantium architecto consequatur delectus. Dolorem placeat eaque non inventore, odit in omnis vitae iste animi itaque reprehenderit?
-                                <a href="#" class="btn">Continue Reading</a>
+                                {{ HisEvent.body|truncatewords:50 }}
+                                <a href="{{ HisEvent.link }}" class="btn" target="_blank">Continue Reading</a>
                             </p>
                         </div>
-                        <div class="card">
-                            <img src="{% static 'images/historical_events/flag.jpg' %}"alt="cardbg" class="cardimg">
-                            <h1>Kargil-War</h1>
-                            <p class="title">May-July 1999</p>
-                            <p class="about">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, numquam voluptatum ullam et velit, quisquam quasi, necessitatibus porro id excepturi nisi laborum! Quaerat perferendis ex sapiente praesentium nostrum consequuntur perspiciatis, accusantium ea explicabo, debitis, laborum nesciunt. Quos soluta id optio.
-                                <a href="#" class="btn">Continue Reading</a>
-                            </p>
-                        </div>
-        
-                        <div class="card">
-                            <img src="{% static 'images/historical_events/parakram.jpg' %}" alt="cardbg" class="cardimg">
-                            <h1>Operation Parakaram</h1>
-                            <p class="title">December, 2001</p>
-                            <p class="about">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel itaque ab tempora unde ipsum fugiat, fuga, quam deleniti quas numquam sit maiores, nulla qui exercitationem doloremque est dignissimos esse voluptatum quo eveniet error laudantium architecto consequatur delectus. Dolorem placeat eaque non inventore, odit in omnis vitae iste animi itaque reprehenderit?
-                                <a href="#" class="btn">Continue Reading</a>
-                            </p>
-                        </div>
-        
-                        <div class="card">
-                            <img src="{% static 'images/historical_events/blue star.jpg' %}" alt="cardbg" class="cardimg">
-                            <h1>Operation Blue Star</h1>
-                            <p class="title">June 7, 1984 </p>
-                            <p class="about">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel itaque ab tempora unde ipsum fugiat, fuga, quam deleniti quas numquam sit maiores, nulla qui exercitationem doloremque est dignissimos esse voluptatum quo eveniet error laudantium architecto consequatur delectus. Dolorem placeat eaque non inventore, odit in omnis vitae iste animi itaque reprehenderit?
-                                <a href="#" class="btn">Continue Reading</a>
-                            </p>
-                        </div>
-        
-                        <div class="card">
-                            <img src="{% static 'images/historical_events/surgical.jpg' %}" alt="cardbg" class="cardimg">
-                            <h1>Surgical Strike</h1>
-                            <p class="title">September 29, 2016</p>
-                            <p class="about">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel itaque ab tempora unde ipsum fugiat, fuga, quam deleniti quas numquam sit maiores, nulla qui exercitationem doloremque est dignissimos esse voluptatum quo eveniet error laudantium architecto consequatur delectus. Dolorem placeat eaque non inventore, odit in omnis vitae iste animi itaque reprehenderit?
-                                <a href="#" class="btn">Continue Reading</a>
-                            </p>
-                        </div>
-        
-                        <div class="card">
-                            <img src="{% static 'images/historical_events/Balakot.jpg' %}" alt="cardbg" class="cardimg">
-                            <h1>Balakot Airstrike</h1>
-                            <p class="title">February 26,2019</p>
-                            <p class="about">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel itaque ab tempora unde ipsum fugiat, fuga, quam deleniti quas numquam sit maiores, nulla qui exercitationem doloremque est dignissimos esse voluptatum quo eveniet error laudantium architecto consequatur delectus. Dolorem placeat eaque non inventore, odit in omnis vitae iste animi itaque reprehenderit?
-                                <a href="#" class="btn">Continue Reading</a>
-                            </p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'images/historical_events/sino-indian.jpg' %}" alt="cardbg" class="cardimg">
-                        <h1>Sino-Indian War</h1>
-                        <p class="title">October-November 1962</p>
-                        <p class="about">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel itaque ab tempora unde ipsum fugiat, fuga, quam deleniti quas numquam sit maiores, nulla qui exercitationem doloremque est dignissimos esse voluptatum quo eveniet error laudantium architecto consequatur delectus. Dolorem placeat eaque non inventore, odit in omnis vitae iste animi itaque reprehenderit?
-                            <a href="#" class="btn">Continue Reading</a>
-                        </p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'images/historical_events/flag.jpg' %}" alt="cardbg" class="cardimg">
-                        <h1>Kargil-War</h1>
-                        <p class="title">May-July 1999</p>
-                        <p class="about">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem officiis explicabo quidem. Blanditiis distinctio dolorum doloribus dolorem omnis quia perspiciatis harum necessitatibus? Voluptatem quo culpa inventore. Voluptatibus, optio quo quis modi commodi ipsam animi. Optio earum quis nostrum nemo corrupti.
-                            <a href="#" class="btn">Continue Reading</a>
-                        </p>
-                    </div>
+                        {% endfor %}
     
-                    <div class="card">
-                        <img src="{% static 'images/historical_events/parakram.jpg' %}" alt="cardbg" class="cardimg">
-                        <h1>Operation Parakaram</h1>
-                        <p class="title">December, 2001</p>
-                        <p class="about">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel itaque ab tempora unde ipsum fugiat, fuga, quam deleniti quas numquam sit maiores, nulla qui exercitationem doloremque est dignissimos esse voluptatum quo eveniet error laudantium architecto consequatur delectus. Dolorem placeat eaque non inventore, odit in omnis vitae iste animi itaque reprehenderit?
-                            <a href="#" class="btn">Continue Reading</a>
-                        </p>
-                    </div>
+                    
                 </div>
             </section>
             <!-- Edited By Aditya Pachore on 26-06-2021 -->
