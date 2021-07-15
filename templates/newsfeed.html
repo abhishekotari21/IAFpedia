@@ -6,83 +6,29 @@
 {% block title %}News Feed{% endblock title %}
 {% block body %}
 <div class="container_box">
+    {% for BlogPost in BlogPosts %}
     <div class="blog_post">
-        <div class="blog_img">
-             <img src="{% static 'images/background.jpg' %}" alt="">
-         </div>
+        <!-- <div class="blog_img">
+             <img src="" alt="">
+         </div> -->
         <div class="blog_post_info">
             <div class="date">
-                <span>Day</span>
-                <span>MM DD YYYY</span>
+                <span>{{BlogPost.day}}</span>
+                <span>{{BlogPost.date}}</span>
             </div>
             <h1 class="blog_title">
-                Lorem ipsum dolor sit amet, consectetur adipisicing.
+                {{BlogPost.title}}
             </h1>
             <p class="blog_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minima labore totam quo enim nostrum itaque adipisci cupiditate ea maiores sed, voluptas voluptatibus repellendus sint odit tempore! Asperiores vero odio, magni facere natus sed ratione amet ex? Suscipit dolorem debitis quo dolores, maxime eos! Quo commodi facere corporis odit incidunt?
+                {{BlogPost.body}}
             </p>
-            <a href="#" class="btn">Continue Reading</a>
+            <a href="{{BlogPost.link}}" class="btn" target="_blank">Continue Reading</a>
         </div>
     </div>
-            
-    <div class="blog_post">
-        <div class="blog_img">
-            <img src="{% static 'images/background.jpg' %}" alt="">
-        </div>
-        <div class="blog_post_info">
-            <div class="date">
-                <span>Day</span>
-                <span>MM DD YYYY</span>
-            </div>
-            <h1 class="blog_title">
-                Lorem ipsum dolor sit amet, consectetur adipisicing.
-            </h1>
-            <p class="blog_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minima labore totam quo enim nostrum itaque adipisci cupiditate ea maiores sed, voluptas voluptatibus repellendus sint odit tempore! Asperiores vero odio, magni facere natus sed ratione amet ex? Suscipit dolorem debitis quo dolores, maxime eos! Quo commodi facere corporis odit incidunt?
-            </p>
-            <a href="#" class="btn">Continue Reading</a>
-        </div>
-    </div>
+    {% endfor %}
 
-    <div class="blog_post">
-        <div class="blog_img">
-            <img src="{% static 'images/background.jpg' %}" alt="">
-        </div>
-        <div class="blog_post_info">
-            <div class="date">
-                <span>Day</span>
-                <span>MM DD YYYY</span>
-            </div>
-            <h1 class="blog_title">
-                Lorem ipsum dolor sit amet, consectetur adipisicing.
-            </h1>
-            <p class="blog_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minima labore totam quo enim nostrum itaque adipisci cupiditate ea maiores sed, voluptas voluptatibus repellendus sint odit tempore! Asperiores vero odio, magni facere natus sed ratione amet ex? Suscipit dolorem debitis quo dolores, maxime eos! Quo commodi facere corporis odit incidunt?
-            </p>
-            <a href="#" class="btn">Continue Reading</a>
-        </div>
-    </div>
-            
-    <div class="blog_post">
-        <div class="blog_img">
-            <img src="{% static 'images/background.jpg' %}" alt="">
-        </div>
-        <div class="blog_post_info">
-            <div class="date">
-                <span>Day</span>
-                <span>MM DD YYYY</span>
-            </div>
-            <h1 class="blog_title">
-                Lorem ipsum dolor sit amet, consectetur adipisicing.
-            </h1>
-            <p class="blog_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minima labore totam quo enim nostrum itaque adipisci cupiditate ea maiores sed, voluptas voluptatibus repellendus sint odit tempore! Asperiores vero odio, magni facere natus sed ratione amet ex? Suscipit dolorem debitis quo dolores, maxime eos! Quo commodi facere corporis odit incidunt?
-            </p>
-            <a href="#" class="btn">Continue Reading</a>
-        </div>
-    </div>
 </div>
 {% endblock body %}
 {% block space %}
-<div class="last-space"></div>
+<div style="margin-top: 230%;"></div>
 {% endblock space %}

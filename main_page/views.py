@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import BlogPost
 # Create your views here.
 def home(request):
     return render(request,'main_page.html')
@@ -17,7 +17,11 @@ def contactus(request):
     return render(request,'contact_us.html')
 
 def newsfeed(request):
-    return render(request,'newsfeed.html')
+    BlogPosts=BlogPost.objects.all()
+    context={
+        'BlogPosts':BlogPosts,
+    }
+    return render(request,'newsfeed.html',context)
 
 def exams(request):
     return render(request,'exam_main_page.html')
