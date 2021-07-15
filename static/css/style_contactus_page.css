@@ -294,3 +294,30 @@ i{
 
 }
 /*Styling added by Omkar Mudkanna for Contact us page*/
+
+/*Omkar J added 16-07-2021*/
+.sub-menu-exam1{
+    display: none;
+}
+.exam1:hover .sub-menu-exam1{
+    position: absolute;
+    display: block;
+    background: #333;
+    box-sizing: border-box;
+    margin-left: 200px;
+}
+.exam1:hover .sub-menu-exam1 ul{
+    display: block;
+}
+.exam1:hover .sub-menu-exam1 ul li{
+    display: block;
+    width: fit-content;
+    padding: 5px;
+}
+.sub-menu-exam1 ul{
+    text-align: center;
+}
+.sub-menu-exam1 ul li:hover{
+    text-shadow: 0.5px 0.5px #f4f4f4; 
+}
+/*Omkar J added 16-07-2021*/
