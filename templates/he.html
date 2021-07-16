@@ -12,7 +12,9 @@
                     <div class="card-wrapper">
                         {% for HisEvent in HisEvents %}
                         <div class="card">
-                            <img src="{% static 'images/historical_events/sino-indian.jpg' %}" alt="cardbg" class="cardimg">
+                            {% if HisEvent.image %}
+                            <img src="{{ HisEvent.image.url }}" alt="cardbg" class="cardimg" width=40>
+                            {% endif %}
                             <h1>{{ HisEvent.title }}</h1>
                             <p class="title">{{ HisEvent.duration }}</p>
                             <p class="about">
