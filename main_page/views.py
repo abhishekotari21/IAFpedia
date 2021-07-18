@@ -7,6 +7,12 @@ from django.contrib import messages
 
 # Create your views here.
 def home(request):
+    if request.user.id:
+        name=request.user.fullname.split()[0]
+        context={
+            'name':name,
+        }
+        return render(request,'main_page.html',context)
     return render(request,'main_page.html')
 
 def about_us(request):
