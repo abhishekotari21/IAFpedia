@@ -15,8 +15,9 @@
             {% for NavyExam in NavyExams %}
             <div class="box" id="box1">
                 <div class="nesting">
+                    {% if NavyExam.image %}
                     <div class="image_container">
-                        <img class="image_box" src="{% static 'images/exam_main_page/canva_others.png' %}">
+                        <img class="image_box" src="{{ NavyExam.image.url }}">
                         <div class="image_overlay" class="image_overlay--blur">
                             <div class="image_title">{{ NavyExam.title|linebreaksbr }}</div>
                             <p class="image_description">
@@ -24,6 +25,7 @@
                             </p>
                         </div>   
                     </div>
+                    {% endif %}
                     <div class="text_container">
                         <h3>{{ NavyExam.title|linebreaksbr }}</h3>
                         <div>
