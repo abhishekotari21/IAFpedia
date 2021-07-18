@@ -575,3 +575,10 @@ i{
     text-shadow: 0.5px 0.5px #f4f4f4; 
 }
 /*Omkar J added 16-07-2021*/
+pre{
+    font-family: "Times New Roman", Times, serif;
+    font-size:20px;
+    line-height:1.6em;
+    color:#FFE4E1;
+    text-decoration:  none solid rgb(255, 228, 225);
+}
