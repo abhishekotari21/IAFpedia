@@ -433,7 +433,7 @@ i{
     margin: auto;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
     grid-gap: 30px;
 }
 .box{
