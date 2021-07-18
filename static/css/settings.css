@@ -67,6 +67,7 @@ nav {
     padding:15px 0;
     position:sticky;
     top:95px;
+    z-index: 2;
 }
 nav ul {
     list-style: none;
@@ -319,3 +320,158 @@ i{
     text-shadow: 0.5px 0.5px #f4f4f4; 
 }
 /*Omkar J added 16-07-2021*/
+
+.container_main{
+    display: grid;
+}
+.main_content{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    float: right;
+    margin-top: 30px;
+    padding-top: 10px;
+    margin-left: 400px;
+}
+
+.button{
+    background: green;
+    color: white;
+    padding: 10px;
+    border: 2px solid red;
+    margin-top: 40px ;
+    display: block;
+    width: fit-content; 
+    margin: 20px auto 0 auto;
+}
+
+
+form {
+    color: black;
+    border:black solid 1px;
+    background:rgb(191, 216, 219,0.8);
+    padding: 40px;
+    width: 42%;
+    position: relative;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    border-radius: 30px;
+    box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.5);
+    /* margin-left: 150px; */
+    margin-top: 20px;
+    /* margin-bottom: 50px; */
+}
+/* @media screen and (min-width: 800px) {
+    form {
+        margin-top: 300px;
+    }
+} */
+form h1{
+    text-align:center;
+}
+form label{
+    font-size:18px;
+    display: block;
+    width: 300px;
+    padding: 12px;
+    margin: 0 20px;
+}
+
+form input {
+    padding: 7px;
+    font-size: 18px;
+}
+form input[type=radio] {
+    margin-left:10px;
+}
+#uname_ans{
+    margin-left: 40px;
+    color: red;
+    font-size: 14px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#date_ans{
+    margin-left: 220px;
+    color: red;
+    font-size: 14px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#email_ans{
+    margin-left: 40px;
+    color: red;
+    font-size: 14px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#pincode_ans{
+    margin-left: 40px;
+    color: red;
+    font-size: 14px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#pass_ans1{
+    margin-left: 40px;
+    color: red;
+    font-size: 14px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#pass_ans2{
+    margin-left: 40px;
+    color: red;
+    font-size: 14px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+select {
+    color:rgb(107, 107, 107);
+}
+.pass {
+    margin-right:0.15em;/*not efficient*/
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select
+{
+    padding: 7px;
+    font-size: 18px;
+    width: 450px;
+    padding: 12px;
+    margin: 0 20px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.inline-label {
+    display: inline;
+}
+.gender-label {
+    margin-left: 0;
+    margin-right: 50px;
+}
+#male {
+    margin-left: 40px;
+}
+.small-space{
+    margin-top:10px;
+}
+.medium-space{
+    margin-top:50px;
+}
+.center {
+    text-align:center;
+}
+.space {
+    margin-top: 100px;
+}
+.button {
+    background: #245526;
+    color: #f4f4f4;
+    border: none;
+    font-size:20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.button:hover {
+    background: #3c8f3f;
+    color: #f4f4f4;
+}

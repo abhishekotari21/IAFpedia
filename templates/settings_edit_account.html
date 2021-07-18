@@ -9,13 +9,13 @@
     <div class="slidebar">
         <h4>Settings</h4>
         <ul>    
-            <li><a href="#"><i class="far fa-user-circle"></i>Profile</a></li>
+            <li><a href="#"><i class="far fa-user-circle"></i>Edit Profile</a></li>
             {% comment %} <li><a href="#"><i class="fas fa-bookmark"></i>Bookmarks</a></li> {% endcomment %}
         </ul>
     </div>
     <div class="main_content">
         <form method="POST" action="{% url 'signup_page' %}">
-            <h1>Your Profile</h1>
+            <h1>Edit Profile</h1>
             <div class="medium-space"></div>
             <label>Enter fullname:</label>
             <input id="fname_test" name="fname_test" type="text" required placeholder="Your fullname">
