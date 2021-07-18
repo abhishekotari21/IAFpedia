@@ -66,3 +66,27 @@ class AirforceExam(models.Model):
     
     def __str__(self):
         return self.title
+
+class ArmySyllabus(models.Model):
+    title=models.CharField(max_length=1000)
+    subjects=models.CharField(max_length=1000)
+    syllabus=models.CharField(max_length=100000)
+    
+    def __str__(self):
+        return self.title
+
+class NavySyllabus(models.Model):
+    title=models.CharField(max_length=1000)
+    subjects=models.CharField(max_length=1000)
+    syllabus=models.CharField(max_length=100000)
+    
+    def __str__(self):
+        return self.title
+
+class AirforceSyllabus(models.Model):
+    title=models.CharField(max_length=1000)
+    subjects=models.CharField(max_length=1000)
+    syllabus=models.CharField(max_length=100000)
+    
+    def __str__(self):
+        return self.title

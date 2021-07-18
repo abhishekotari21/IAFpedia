@@ -3,7 +3,7 @@
 
 {%block css%}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style_exam_subpage.css' %}">{%endblock css%}
-{% block title %}Exam Subpage{% endblock title %}
+{% block title %}{{exam.title}}{% endblock title %}
 {% block body %}
 <div class="container_main">
     <div class="sidebar">
@@ -18,29 +18,78 @@
 
     <div class="main_content">
         <div class="section">  <!--1-->
-            <h1 id="exam_info">Exam Name</h1>
-            <p>Exam Info.: Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quidem, rem quisquam itaque animi, perspiciatis voluptatem debitis beatae explicabo magnam odit exercitationem quo at, id aspernatur ipsum atque repudiandae quod necessitatibus aliquid excepturi ratione quas repellat! Dolor, omnis optio provident dignissimos a soluta sit dolorum quod vel earum voluptatum repellendus consequuntur cupiditate quam cum totam eaque voluptates unde sequi natus qui. Quod non praesentium ipsum iure, exercitationem asperiores temporibus soluta aliquid voluptas autem magni ipsa at id culpa commodi beatae porro eius aspernatur quasi quis a modi. In minima, similique voluptas deserunt corporis nihil veritatis tempore explicabo sed a natus, laudantium accusamus alias blanditiis? Aliquam alias est aperiam deserunt perspiciatis non dolore officia iure, asperiores unde dolores delectus quae fuga quia fugit iusto. Animi, aperiam doloremque dolorum consectetur eius dolore ex reiciendis facere dignissimos eum magni sequi corporis rem iste illo fuga veniam nisi esse aliquam. Dicta quisquam illo tempora incidunt et magni, praesentium ullam provident suscipit similique odit iste amet excepturi dolorum harum. Ducimus dolores consequatur accusamus cumque aliquam amet vero labore, inventore excepturi fugiat eum quo aut velit earum blanditiis, et nam autem ad repudiandae adipisci? Facere dolores et saepe adipisci accusamus sunt placeat ullam excepturi incidunt nam. ?</p>
+            <h1 id="exam_info">{{exam.title}}</h1>
+            <table id="exam_info">
+                <tr>
+                    <td>Title</td>
+                    <td>{{exam.title}}</td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>{{exam.language}}</td>
+                </tr>
+                <tr>
+                    <td>Occurance</td>
+                    <td>{{exam.occurance}}</td>
+                </tr>
+                <tr>
+                    <td>Mode of Exam</td>
+                    <td>{{exam.mode_of_exam}}</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>{{exam.type}}</td>
+                </tr>
+
+
+            </table>
         </div>
 
         <div class="section" > <!--2-->
-            <h1 id="exam_syllabus"> Exam Syllabus</h1>
+            <h1 id="exam_syllabus">Syllabus</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, totam. Alias, maxime tempore assumenda voluptate impedit incidunt numquam! Quisquam magni quae fugiat ipsam dolore itaque eius cumque nulla, accusamus architecto similique voluptatibus accusantium! Eaque est eligendi adipisci mollitia, enim esse atque dolores laudantium totam iste iure eum vel pariatur, tempore corrupti eos tenetur veniam consectetur velit voluptatum ipsa ratione quaerat modi. Nemo velit sint animi saepe quo culpa, voluptates harum atque adipisci, est ex? Pariatur illo maiores quibusdam ipsum autem quidem cupiditate, nostrum error ut eos. Omnis asperiores animi pariatur quae possimus voluptatum velit doloribus commodi reprehenderit! Nulla officia facilis expedita adipisci explicabo ducimus voluptates aut iusto doloremque. Quasi cumque ad natus fugiat provident vel deleniti atque maiores. Repudiandae in inventore perspiciatis cupiditate totam earum ut, optio a ea architecto aspernatur quo sint laboriosam consequatur rem sit nulla beatae quis repellat! Iste impedit blanditiis facilis adipisci, consequuntur sit. Nulla vel commodi vitae, iure cupiditate repudiandae voluptates facilis temporibus provident tempora quos officiis nesciunt deleniti obcaecati dolor soluta ipsa sint consequuntur ut laboriosam sit laborum sequi illum ratione.
+                {% for key, value in dictionary.items %}
+                <h3>{{ key }}</h3>
+                {{ value }}
+                <br>
+                <br>
+                {% endfor %}
             </p>
         </div>
 
         <div class="section" id="exam_eligibility">  <!--3-->
-            <h1>Exam Eligibilty Criteria</h1>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi sint fuga pariatur, beatae ullam voluptatem porro, deserunt quibusdam temporibus harum consequuntur saepe officiis! Ex quas minima quasi excepturi eveniet, vel veritatis, unde earum modi facilis velit, numquam soluta laboriosam temporibus? Sapiente molestias non, nihil obcaecati quod laudantium. Animi consectetur a reiciendis hic! Mollitia itaque, necessitatibus recusandae error corrupti sed consequuntur vitae tempore! Necessitatibus temporibus nobis ipsum tenetur sunt! Fugit consectetur dolorem repudiandae voluptas, inventore iusto tenetur. Ipsum quas, omnis animi, maxime praesentium, non quo corporis dolores fuga pariatur quam dignissimos ipsa reiciendis reprehenderit. Modi cupiditate commodi ratione adipisci sunt neque eos vitae accusantium, cum voluptas laudantium veniam aut. Suscipit, corrupti ducimus officia delectus eveniet nesciunt reiciendis pariatur quidem deleniti voluptas quaerat consequatur vitae vero quos iure, ex fuga eum ad similique modi perferendis. Cum quae a, animi et modi numquam id vero porro, deserunt unde at error eligendi iusto. Natus architecto, laborum animi quibusdam ducimus quia? Eum saepe corrupti voluptate reiciendis! Ex asperiores quos repudiandae aperiam sapiente necessitatibus totam tempore quia sunt eum ab pariatur iure rem, quis corporis, soluta rerum itaque nulla reprehenderit architecto ipsa ad eveniet sint! Sapiente eum blanditiis, cumque reprehenderit fugiat minima atque debitis tempora ad?
-            </p>
+            <h1>Eligibilty Criteria</h1>
+            <br>
+            <br>
+            <h2>Nationality</h2>
+                <p>
+                {% for line in eligibility_nationality %}
+                {{ line }}
+                <br>
+                {% endfor %}
+                </p>
+            <h2>Educational Criteria</h2>
+                <p>
+                {% for line in eligibility_educational %}
+                {{ line }}
+                <br>
+                {% endfor %}
+                </p>
+            <h2>Age Criteria</h2>
+                <p>
+                {% for line in eligibility_age %}
+                {{ line }}
+                <br>
+                {% endfor %}
+                </p>
         </div>
-
+        <br>
         <div class="section" id="exam_link"> <!---6-->
-            <h1>Exam Official Registeration link</h1>
+            <h1>Official Registeration link</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum similique, vitae perferendis quos et quaerat corporis magnam a repellendus assumenda sint earum blanditiis quidem error molestiae eos pariatur. Similique iste maiores dolore temporibus soluta voluptatibus laboriosam error reprehenderit, dignissimos blanditiis velit totam ullam excepturi aliquam nostrum aut a facilis ipsam quis, sed eaque optio. Labore eligendi ex sint, veritatis praesentium provident dicta voluptatibus voluptatem enim distinctio hic adipisci quam officia eveniet veniam incidunt alias quae dolores modi? Ut repellat ratione et illo consequuntur recusandae aspernatur quo minus nesciunt quam fugiat nostrum numquam, blanditiis sapiente? Maiores possimus velit excepturi facere deserunt!
+                Please refer below link for more information
             </p>
+            <a id="exam_link1" href="{{exam.link}}" target="_blank">{{exam.link}}</a>
         </div>
     </div>
 
