@@ -1,5 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import BlogPost, HistoricalEvent, ArmyExam, NavyExam, AirforceExam
+from sign_up_page.models import Account
+
+from django.contrib.auth.models import User,auth
+from django.contrib import messages
+
 # Create your views here.
 def home(request):
     return render(request,'main_page.html')
@@ -75,3 +80,38 @@ def donations(request):
 
 def settings(request):
     return render(request,'settings.html')
+
+def settings_edit(request):
+    if request.method == 'POST':
+        userid=request.user.id
+        Account.objects.get(pk=userid).delete()
+        fullname=request.POST['fname_test']
+        username=request.POST['uname_test']
+        dob=request.POST['date_test']
+        gender=request.POST['btn']
+        email=request.POST['email_test']
+        state=request.POST['state']
+        city=request.POST['city']
+        pincode=request.POST['pincode_test']
+        password1=request.POST['pass_test1']
+        password2=request.POST['pass_test2']
+        if password1==password2:
+            if Account.objects.filter(email=email).exists() and email!='':
+                messages.info(request, 'Email already used. Use another email id.')
+                return redirect('settings_edit')
+            elif Account.objects.filter(username=username).exists():
+                messages.info(request, 'Username not available. Use another username')
+                return redirect('settings_edit')
+            else:
+                user=Account.objects.create_user(fullname=fullname,username=username, dob=dob, gender=gender, email=email, state=state,city=city, pincode=pincode, password=password1)
+                user.save()
+                messages.info(request, 'Account details updated.')
+                user = auth.authenticate(username=username,password=password1)
+                auth.login(request,user)
+
+                return redirect('settings')
+        else:
+            messages.info(request, 'Make sure your passwords match.')
+            return redirect('settins_edit')
+    else:
+        return render(request,'settings_edit_account.html')

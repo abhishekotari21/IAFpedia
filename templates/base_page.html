@@ -62,6 +62,7 @@
                 <li><a href="{% url 'he' %}">HISTORICAL EVENTS</a></li>
                 <li><a href="{% url 'donations' %}">DONATIONS</a></li>
                 <div class="right">
+                    {% comment %}
                     <li class="bell"><a href="#">
                         <img src="{% static 'images/bell.svg' %}" style="vertical-align: middle;" alt="bell" width="20px"></a> 
                         <div class="sub-menu-bell">
@@ -70,16 +71,16 @@
                                 <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
                                 <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing.</a></li>
                             </ul>
-                        </div>   
+                        </div>    {% endcomment %}
                     </li>
-                    <li class="user"><a href="#">
+                    <li class="user"><a href="{% url 'settings' %}">
                         <img src="{% static 'images/user.svg' %}" style="vertical-align: middle;" alt="user" width="20px"></a>
                         <div class="sub-menu-user">
                             <ul>
                                 {% if user.is_authenticated %}
                                 <li><a href="{% url 'settings' %}"><i class="far fa-user-circle"></i>Profile</a></li>
-                                <li><a href="{% url 'settings' %}"><i class="fas fa-bookmark"></i>Bookmarks</a></li>
-                                <li><a href="{% url 'settings' %}"><i class="fas fa-cog"></i>Settings</a></li>
+                                {% comment %} <li><a href="{% url 'settings' %}"><i class="fas fa-bookmark"></i>Bookmarks</a></li> {% endcomment %}
+                                {% comment %} <li><a href="{% url 'settings' %}"><i class="fas fa-cog"></i>Settings</a></li> {% endcomment %}
                                 <li>
                                         <a href="{% url 'logout' %}"><i class="fas fa-power-off"></i>Logout</a>
                                 </li>
