@@ -53,9 +53,13 @@
 
 <div class="flex">
     <div class="exam">
+        
         <p id="exam-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium numquam explicabo, non voluptatibus ex mollitia sit ipsum veniam laboriosam aliquam hic sunt? Eum exercitationem maiores molestiae ipsam, porro nemo laboriosam.<br>
-            <a href="#"><button>KNOW MORE</button></a>
+            {{ exam.title }}
+            <br>
+            The Combined Defence Services Examination (abbreviated as CDS Exam) is conducted by the Union Public Service Commission for recruitment of Commissioned Officers. The Notification for the examination is usually released in the months of October and June, and the examinations are conducted in February and November respectively. 
+            <br>
+            <a href="exams/army/{{exam.id}}"><button>KNOW MORE</button></a>
         </p>     
     </div>
     <div class="message-box">

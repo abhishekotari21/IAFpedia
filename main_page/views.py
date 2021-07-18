@@ -9,8 +9,10 @@ from django.contrib import messages
 def home(request):
     if request.user.id:
         name=request.user.fullname.split()[0]
+        exam=ArmyExam.objects.get(id=1)
         context={
             'name':name,
+            'exam':exam,
         }
         return render(request,'main_page.html',context)
     return render(request,'main_page.html')
