@@ -67,6 +67,7 @@ nav {
     padding:15px 0;
     position:sticky;
     top:95px;
+    z-index: 2;
 }
 nav ul {
     list-style: none;
@@ -323,43 +324,6 @@ i{
 .container_main{
     display: grid;
 }
-.sidebar{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    position: fixed;
-    left: 0;
-    width: 20%;
-    height: 100%;
-    background: rgb(40, 40, 40);
-    z-index: 0;
-}
-.sidebar h1{
-    font-size: 22px;
-    color: white;
-    text-align: center;
-    line-height: 70px;
-    background: rgb(65, 64, 64);
-}
-.sidebar ul a{
-    display: block;
-    height: 100%;
-    width: 100%;
-    line-height: 50px;
-    font-size: 20px;
-    color: white;
-    padding-left: 40px;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    border-bottom: 1px solid black;
-    transition: .4s;
-    text-decoration: none;
-}
-.sidebar ul li:hover a{
-    padding-left: 50px;
-}
-.sidebar ul a i{
-    margin-right: 16px;
-}
 .main_content{
     grid-column: 2/4;
     grid-row: 1/2;
@@ -387,16 +351,16 @@ form {
     background:rgb(191, 216, 219,0.8);
     padding: 40px;
     width: 42%;
-    /* position: relative; */
+    position: relative;
     top: 50%;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%,-50%);
     z-index: 1;
     border-radius: 30px;
     box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.5);
     /* margin-left: 150px; */
     margin-top: 20px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 /* @media screen and (min-width: 800px) {
     form {
