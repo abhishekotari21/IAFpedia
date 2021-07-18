@@ -21,3 +21,48 @@ class HistoricalEvent(models.Model):
 
     def __str__(self):
         return self.title
+
+class ArmyExam(models.Model):
+    title=models.CharField(max_length=1000)
+    language=models.CharField(max_length=50)
+    occurance=models.CharField(max_length=50)
+    mode_of_exam=models.CharField(max_length=50)
+    eligibility_nationality=models.CharField(max_length=10000)
+    eligibility_educational=models.CharField(max_length=10000)
+    eligibility_age=models.CharField(max_length=50)
+    link=models.CharField(max_length=100)
+    type=models.CharField(max_length=100)
+    image=models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+class NavyExam(models.Model):
+    title=models.CharField(max_length=1000)
+    language=models.CharField(max_length=50)
+    occurance=models.CharField(max_length=50)
+    mode_of_exam=models.CharField(max_length=50)
+    eligibility_nationality=models.CharField(max_length=10000)
+    eligibility_educational=models.CharField(max_length=10000)
+    eligibility_age=models.CharField(max_length=50)
+    link=models.CharField(max_length=100)
+    type=models.CharField(max_length=100)
+    image=models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+class AirforceExam(models.Model):
+    title=models.CharField(max_length=1000)
+    language=models.CharField(max_length=50)
+    occurance=models.CharField(max_length=50)
+    mode_of_exam=models.CharField(max_length=50)
+    eligibility_nationality=models.CharField(max_length=10000)
+    eligibility_educational=models.CharField(max_length=10000)
+    eligibility_age=models.CharField(max_length=50)
+    link=models.CharField(max_length=100)
+    type=models.CharField(max_length=100)
+    image=models.ImageField(null=True, blank=True)
+    
+    def __str__(self):
+        return self.title

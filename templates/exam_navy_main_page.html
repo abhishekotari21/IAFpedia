@@ -12,20 +12,20 @@
     <br><br>
     <div class="soldiers_exam"><br>
         <div class="box_container">
-            {% for ArmyExam in ArmyExams %}
+            {% for NavyExam in NavyExams %}
             <div class="box" id="box1">
                 <div class="nesting">
                     <div class="image_container">
                         <img class="image_box" src="{% static 'images/exam_main_page/canva_others.png' %}">
                         <div class="image_overlay" class="image_overlay--blur">
-                            <div class="image_title">{{ ArmyExam.title|linebreaksbr }}</div>
+                            <div class="image_title">{{ NavyExam.title|linebreaksbr }}</div>
                             <p class="image_description">
                                 Dream big!!
                             </p>
                         </div>   
                     </div>
                     <div class="text_container">
-                        <h3>{{ ArmyExam.title|linebreaksbr }}</h3>
+                        <h3>{{ NavyExam.title|linebreaksbr }}</h3>
                         <div>
                             <a class="button" href="#">Know More</a><br>
                         </div>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BlogPost, HistoricalEvent
+from .models import BlogPost, HistoricalEvent, ArmyExam, NavyExam, AirforceExam
 # Create your views here.
 def home(request):
     return render(request,'main_page.html')
@@ -24,7 +24,32 @@ def newsfeed(request):
     return render(request,'newsfeed.html',context)
 
 def exams(request):
-    return render(request,'exam_main_page.html')
+    ArmyExams=ArmyExam.objects.all()
+    context={
+        'ArmyExams':ArmyExams,
+    }
+    return render(request,'exam_main_page.html',context)
+
+def exams_army(request):
+    ArmyExams=ArmyExam.objects.all()
+    context={
+        'ArmyExams':ArmyExams,
+    }
+    return render(request,'exam_main_page.html',context)
+
+def exams_navy(request):
+    NavyExams=NavyExam.objects.all()
+    context={
+        'NavyExams':NavyExams,
+    }
+    return render(request,'exam_navy_main_page.html',context)
+
+def exams_airforce(request):
+    AirforceExams=AirforceExam.objects.all()
+    context={
+        'AirforceExams':AirforceExams,
+    }
+    return render(request,'exam_airforce_main_page.html',context)
 
 def exam_subpage(request):
     return render(request,'exam_subpage.html')
