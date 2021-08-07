@@ -377,3 +377,6 @@ i{
     text-shadow: 0.5px 0.5px #f4f4f4; 
 }
 /*Omkar J added 16-07-2021*/
+#about_creator img{
+    width: 50px;
+}
