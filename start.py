@@ -3,7 +3,7 @@
 # IAFpedia-Website for Defence Examinations
 # 2 Django Apps 1)Main content 2)User authentication
 # 30 HTML Files
-# 30 CSS Files
+# 20 CSS Files
 # 5 JavaScript Files
 
 
